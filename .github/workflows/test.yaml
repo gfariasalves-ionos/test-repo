@@ -1,4 +1,4 @@
-name: "test"
+
 on: [ pull_request ]
 jobs:
   runs-on: ubuntu-latest
@@ -7,5 +7,5 @@ jobs:
       echo "a=b" >> "$GITHUB_OUTPUT"
       echo "a=b" >> "$GITHUB_OUTPUT"
       echo $GITHUB_OUTPUT
-      echo "asdasdas"
+      echo "ddasdasdasdasdafagWEG"
       cat $GITHUB_OUTPUT
