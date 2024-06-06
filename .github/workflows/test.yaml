@@ -12,8 +12,4 @@ jobs:
           echo $GITHUB_OUTPUT
           echo "ddasdasdasdasdafagWEG"
           cat $GITHUB_OUTPUT
-      - name: "aaa"
-        with:
-          RESULT: ${{ steps.test.outputs.a }}
-        run: |
-          echo $RESULT
+
