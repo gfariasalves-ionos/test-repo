@@ -8,8 +8,14 @@ jobs:
         id: test
         run: |
           echo "a=b" >> "$GITHUB_OUTPUT"
-          echo "a=b" >> "$GITHUB_OUTPUT"
+          echo "c=d" >> "$GITHUB_OUTPUT"
+          echo "gh output"
           echo $GITHUB_OUTPUT
-          echo "ddasdasdasdasdafagWEG"
+          echo "contents of gh output"
           cat $GITHUB_OUTPUT
-
+      - name: test2
+        id: test2
+        env:
+          RESULT: ${{ steps.test.outputs.a }}
+        run: |
+          echo "$RESULT"
