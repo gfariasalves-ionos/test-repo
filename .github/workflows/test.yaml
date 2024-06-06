@@ -3,9 +3,14 @@ on: [ pull_request ]
 jobs:
   runs-on: ubuntu-latest
   steps:
-    - run: |
+    - name: "test-step"
+      id: test
+      run: |
         echo "a=b" >> "$GITHUB_OUTPUT"
         echo "a=b" >> "$GITHUB_OUTPUT"
         echo $GITHUB_OUTPUT
         echo "ddasdasdasdasdafagWEG"
         cat $GITHUB_OUTPUT
+    - name: "aaa"
+      with:
+      RESULT: ${{ steps.test.outputs.a }}
