@@ -1,0 +1,11 @@
+name: "test"
+on: [ pull_request ]
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - run: |
+      echo "a=b" >> "$GITHUB_OUTPUT"
+      echo "a=b" >> "$GITHUB_OUTPUT"
+      echo $GITHUB_OUTPUT
+      echo "asdasdas"
+      cat $GITHUB_OUTPUT
