@@ -15,5 +15,5 @@ jobs:
       - name: "aaa"
         with:
           RESULT: ${{ steps.test.outputs.a }}
-        run:
+        run: |
           echo $RESULT
